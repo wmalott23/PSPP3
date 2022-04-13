@@ -11,7 +11,7 @@
 //     return result;
 //     }
 
-// problemOne = checkArray();
+// let problemOne = checkArray();
 // console.log(problemOne)
 
 
@@ -25,31 +25,59 @@
 //     else console.log("You were wrong :(. It isn't a palindrome")
 // }
 
-// run = checkPalindrome()
+// let run = checkPalindrome()
 
-function checkIncrement(){
-    let array = [10, 12, 14, 6, 8];
-    let findMin = array.filter(function(el){
-        let counter = 0;
-        for(let i = 0; i<array.length; i++){
-            if(el<array[i]) counter++;
-            if(counter == array.length-1) return el;
-        }})
-    let findMax = array.filter(function(el){
-        let counter = 0;
-        for(let i = 0; i<array.length; i++){
-            if(el>array[i]) counter++;
-            if(counter == array.length-1) return el;
-        }})
-    let increment = (findMax - findMin) / (array.length-1);
-    let trueCounter =0;
-    let checkAnswer = Number(findMin) + increment;
-    for(let i = 1; i<array.length; i++){
-        if(array.includes(checkAnswer)) {trueCounter++;}
-        checkAnswer = checkAnswer + increment;
-    }
-    if (trueCounter == array.length-1) return console.log("true");
-    else return console.log("false");
-}
+// function checkIncrement(){
+//     let array = [10, 12, 14, 6, 8];
+//     let findMin = array.filter(function(el){
+//         let counter = 0;
+//         for(let i = 0; i<array.length; i++){
+//             if(el<array[i]) counter++;
+//             if(counter == array.length-1) return el;
+//         }})
+//     let findMax = array.filter(function(el){
+//         let counter = 0;
+//         for(let i = 0; i<array.length; i++){
+//             if(el>array[i]) counter++;
+//             if(counter == array.length-1) return el;
+//         }})
+//     let increment = (findMax - findMin) / (array.length-1);
+//     let trueCounter =0;
+//     let checkAnswer = Number(findMin) + increment;
+//     for(let i = 1; i<array.length; i++){
+//         if(array.includes(checkAnswer)) {trueCounter++;}
+//         checkAnswer = checkAnswer + increment;
+//     }
+//     if (trueCounter == array.length-1) return console.log("true");
+//     else return console.log("false");
+// }
 
-problemThree = checkIncrement();
+// let problemThree = checkIncrement();
+
+// function retPosNeg(){
+//     let counter = 0;
+//     let array = []
+//     while(counter == 0){
+//         let input = prompt("Please enter a number or enter 'confirm' when finished entering numbers");
+//         if(input != 'confirm') array.push(Number(input));
+//         else counter = 1;
+//     }
+//     console.log(array);
+//     let posArray = array.filter(function(el){
+//         if(el>0) return true;
+//     });
+//     let negArray = array.filter(function(el){
+//         if(el<0) return true;
+//     });
+//     let posResult = posArray.reduce(function(total, el){
+//         return total + el;
+//     });
+//     let negResult = negArray.reduce(function(total, el){
+//         return total + el;
+//     });
+//     return `${posResult}, ${negResult}`;
+// }
+
+// let problemFour = retPosNeg();
+// console.log(problemFour);
+
