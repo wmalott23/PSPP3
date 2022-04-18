@@ -134,16 +134,68 @@
 // let problemSix = checkEmail();
 // console.log(problemSix);
 
-function letterToNumber(){
-    let alphabet = " abcdefghijklmnopqrstuvwxyz";
-    let newString = "";
-    let input = prompt("Please enter a string of letters and I will replace those letters with their placement in the alphabet")
-    newString += `${alphabet.indexOf(input[0])}`
-    for( let i = 1; i<input.length; i++)(
-        newString += ` ${alphabet.indexOf(input[i])}`
-    )
-    return newString
+// function letterToNumber(){
+//     let alphabet = " abcdefghijklmnopqrstuvwxyz";
+//     let newString = "";
+//     let input = prompt("Please enter a string of letters and I will replace those letters with their placement in the alphabet")
+//     newString += `${alphabet.indexOf(input[0])}`
+//     for( let i = 1; i<input.length; i++)(
+//         newString += ` ${alphabet.indexOf(input[i])}`
+//     )
+//     return newString
+// }
+
+// let problemSeven = letterToNumber();
+// console.log(problemSeven)
+
+// function lockTurns(){
+//     let currentCombo = prompt("Enter a 4 digit number to be the current lock");
+//     let targetCombo = prompt("Now enter the four digit target lock and I will tell you the number of turns it takes to get there");
+//     let turnNumber = 0;
+//     for(let i = 0; i<currentCombo.length; i++){
+//         if(currentCombo[i] > targetCombo[i]) turnNumber += currentCombo[i] - targetCombo[i];
+//         else turnNumber += targetCombo[i] - currentCombo[i];
+//     }
+//     return turnNumber;
+// }
+
+// let problemEight = lockTurns();
+// console.log(problemEight);
+
+// function happyNumbers(){
+//     let ogInput = prompt("Please enter a number you think may be happy");
+//     let happyInput = ogInput;
+//     let happyCount = 0;
+//     let happyCounter = 0;
+//     let prevIterations = [];
+//     let loopCount = 0;
+//     while(loopCount == 0 && happyCounter < 50){
+//         for(let i = 0; i < happyInput.length; i++){
+//             happyCount = happyCount + happyInput[i] * happyInput[i];}
+//         if(happyCount == 1) loopCount = 1;
+//         else if(prevIterations.includes(happyCount)) loopCount = 2;
+//         else {happyCounter += 1; prevIterations.push(happyCount)}
+//         happyInput = happyCount.toString();
+//         happyCount = 0;
+//     }
+//     if(loopCount == 1) console.log(`${ogInput} is ${happyCounter} happy!`);
+//     else if(loopCount == 2) console.log(`${ogInput} is not happy :(`);
+//     else console.log("An error has occured");
+// }
+
+// let problemNine = happyNumbers();
+// console.log(problemNine);
+
+function flipAndReverse(){
+    let input = prompt("Please enter a number and I will find the reciprocal of the reverse of that number")
+    let newNumber = input[input.length-1]
+    for(let i = 1; i<input.length-1; i++){
+        if(typeof input[-i] == "undefined") newNumber+="0";
+        else newNumber += input[-i];
+    }
+    let result = 1/Number(newNumber);
+    return result;
 }
 
-let problemSeven = letterToNumber();
-console.log(problemSeven)
+problemTen = flipAndReverse();
+console.log(problemTen);
