@@ -81,3 +81,32 @@
 // let problemFour = retPosNeg();
 // console.log(problemFour);
 
+// function checkHighLow(){
+//     let input = prompt("Please enter a bunch of numbers separated by spaces and I will find the highest and lowest numbers");
+//     let numArray = [];
+//     let currentNum = "";
+//     for(let i = 0; i<input.length+1; i++){
+//         if(input[i] == " " || i == input.length) {
+//             numArray.push(Number(currentNum));
+//             currentNum = "";
+//         }
+//         else currentNum = currentNum + input[i];
+//     }
+//     let findMin = numArray.filter(function(el){
+//         let counter = 0;
+//         for(let i = 0; i<numArray.length; i++){
+//             if(el<numArray[i]) counter++;
+//             if(counter == numArray.length-1) return true;
+//         }})
+//     let findMax = numArray.filter(function(el){
+//         let counter = 0;
+//         for(let i = 0; i<numArray.length; i++){
+//             if(el>numArray[i]) counter++;
+//             if(counter == numArray.length-1) return true;
+//         }})
+//     return `${findMin} and ${findMax}`
+//     }
+
+// let problemFive = checkHighLow();
+// console.log(problemFive);
+
