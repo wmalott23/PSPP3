@@ -110,26 +110,40 @@
 // let problemFive = checkHighLow();
 // console.log(problemFive);
 
-function promptFor(question, valid){
-    do {
-        var response = prompt(question).trim();
-    } while (!valid(response));
-    return response;
+// function promptFor(question, valid){
+//     do {
+//         var response = prompt(question).trim();
+//     } while (!valid(response));
+//     return response;
+// }
+
+// function charEmail(input){
+//     let counter = 0;
+//     for(let i=0; i<input.length; i++){
+//         if(input[i] == "@") counter ++;
+//     }
+//     if(input.slice(-4,-1) == ".co" && input[input.length-1] == "m") counter ++;
+//     if(counter == 2) return true;
+//     else alert("This is not a valid email")
+// }
+
+// function checkEmail(){
+//     let validatedEmail = promptFor("Please input an email address", charEmail);
+//     return `${validatedEmail} is an email!`;
+// }
+// let problemSix = checkEmail();
+// console.log(problemSix);
+
+function letterToNumber(){
+    let alphabet = " abcdefghijklmnopqrstuvwxyz";
+    let newString = "";
+    let input = prompt("Please enter a string of letters and I will replace those letters with their placement in the alphabet")
+    newString += `${alphabet.indexOf(input[0])}`
+    for( let i = 1; i<input.length; i++)(
+        newString += ` ${alphabet.indexOf(input[i])}`
+    )
+    return newString
 }
 
-function charEmail(input){
-    let counter = 0;
-    for(let i=0; i<input.length; i++){
-        if(input[i] == "@") counter ++;
-    }
-    if(input.slice(-4,-1) == ".co" && input[input.length-1] == "m") counter ++;
-    if(counter == 2) return true;
-    else alert("This is not a valid email")
-}
-
-function checkEmail(){
-    let validatedEmail = promptFor("Please input an email address", charEmail);
-    return `${validatedEmail} is an email!`;
-}
-let problemSix = checkEmail();
-console.log(problemSix);
+let problemSeven = letterToNumber();
+console.log(problemSeven)
